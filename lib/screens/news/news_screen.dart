@@ -4,10 +4,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_application/screens/news_details/news_details_screen.dart';
 
-class NewsScreen extends StatelessWidget {
+class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
 
   @override
+  State<NewsScreen> createState() => _NewsScreenState();
+}
+
+class _NewsScreenState extends State<NewsScreen> {
+  final news = <News>[];
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
