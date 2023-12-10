@@ -45,7 +45,7 @@ class _NewsScreenState extends State<NewsScreen> {
           return ListTile(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return NewsDetailsScreen();
+                return NewsDetailsScreen(news: newsItem);
               }));
             },
             leading: newsItem.imageUrl != null

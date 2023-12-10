@@ -2,12 +2,16 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news_application/screens/news/news_screen.dart';
+import 'package:news_application/models/news.dart';
+// import 'package:news_application/screens/news/news_screen.dart';
 
 class NewsDetailsScreen extends StatelessWidget {
   const NewsDetailsScreen({
     super.key,
+    required this.news,
   });
+
+  final News news;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +26,20 @@ class NewsDetailsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 235,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+              if (news.imageUrl != null)
+                Container(
+                  height: 235,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6),
                     image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(
-                          'https://optavideo.com/images/chart/Test_chart_11.jpg',
-                        ))),
-              ),
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        news.imageUrl!,
+                      ),
+                    ),
+                  ),
+                ),
               const Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text(
