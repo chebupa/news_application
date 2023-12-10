@@ -28,7 +28,8 @@ class NewsDetailsScreen extends StatelessWidget {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: NetworkImage(
-                            'https://optavideo.com/images/chart/Test_chart_11.jpg'))),
+                          'https://optavideo.com/images/chart/Test_chart_11.jpg',
+                        ))),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 16),
