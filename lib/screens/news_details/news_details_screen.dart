@@ -56,18 +56,6 @@ class NewsDetailsScreen extends StatelessWidget {
                       children: [Text('Перейти в источник')],
                     ),
                   )),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CupertinoButton.filled(
-                      child: Text('Go back'),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      }),
-                  Spacer(),
-                  CupertinoButton.filled(child: Text('Text'), onPressed: () {})
-                ],
-              )
             ],
           ),
         ),
