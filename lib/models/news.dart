@@ -4,10 +4,10 @@ class News {
   final String imageUrl;
   final String sourceUrl;
 
-  News(
-    this.title,
-    this.description,
-    this.imageUrl,
-    this.sourceUrl,
-  );
+  News({
+    required this.title,
+    required this.description,
+    required this.imageUrl,
+    required this.sourceUrl,
+  });
 }
