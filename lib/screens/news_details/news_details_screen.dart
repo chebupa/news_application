@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_application/models/news.dart';
 // import 'package:news_application/screens/news/news_screen.dart';
@@ -40,18 +39,19 @@ class NewsDetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nulla a ante enim. Morbi placerat nibh est, elementum vulputate odio efficitur eget. Pellentes.',
+                  news.title,
                   style: TextStyle(fontSize: 24),
                 ),
               ),
               const Divider(),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 8),
                 child: Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nulla a ante lobortis scelerisque nec vitae enim. Morbi placerat nibh est, elementum vulputate odio efficitur eget. Pellentesque eu sollicitudin nulla, quis maximus dui. Mauris ac arcu quis nisi rutrum tempor. Duis a molestie arcu, sed lacinia justo. Ut euismod, enim vitae eleifend scelerisque, turpis felis aliquam turpis, in hendrerit dolor leo id lectus. Fusce sed ornare ipsum, a aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non nulla a ante lobortis scelerisque nec vitae enim. Morbi placerat nibh est, elementum vulputate odio efficitur eget. Pellentesque eu sollicitudin nulla, quis maximus dui. Mauris ac arcu quis nisi rutrum tempor. Duis a molestie arcu, sed lacinia justo. Ut euismod, enim vitae eleifend scelerisque, turpis felis aliquam turpis, in hendrerit dolor leo id lectus. Fusce sed ornare ipsum, a aliquam arcu.'),
+                  news.description,
+                ),
               ),
               Padding(
                   padding: const EdgeInsets.only(top: 25),
@@ -63,7 +63,9 @@ class NewsDetailsScreen extends StatelessWidget {
                     onPressed: () {},
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
-                      children: [Text('Перейти в источник')],
+                      children: [
+                        Text('Перейти в источник'),
+                      ],
                     ),
                   )),
             ],
