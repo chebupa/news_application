@@ -1,3 +1,3 @@
 # news_application
 
-A new Flutter project.
+Space news flutter app from "Flutter Study Jam 2023"
